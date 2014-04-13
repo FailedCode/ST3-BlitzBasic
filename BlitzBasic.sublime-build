@@ -1,0 +1,21 @@
+{
+	"selector": "source.blitzbasic",
+	"shell": true,
+	"path": "D:\\Programme\\Blitz3D\\bin\\",
+	"env": {
+		"blitzpath": "D:\\Programme\\Blitz3D\\"
+	},
+	"working_dir": "${project_path:${folder:${file_path}}}",
+	"cmd": ["blitzcc", "-o", "${project_base_name:${file_base_name}}.exe", "${project_base_name:${file_base_name}}.bb"],
+
+	"variants": [
+		{
+			"name": "Debug Version",
+			"cmd": ["blitzcc", "-d", "${project_base_name:${file_base_name}}.bb"],
+		},
+		{
+			"name": "Check Syntax",
+			"cmd": ["blitzcc", "-c", "${project_base_name:${file_base_name}}.bb"],
+		}
+	]
+}

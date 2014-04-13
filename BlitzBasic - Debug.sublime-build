@@ -1,6 +1,0 @@
-{
-	"path": "D:/Programme/Blitz3D/bin/",
-	"cmd": ["blitzcc", "-d", "-o", "${project_base_name:${file_base_name}}.bb"],
-	"selector": "source.blitzbasic",
-	"working_dir": "${project_path:${folder:${file_path}}}"
-}
