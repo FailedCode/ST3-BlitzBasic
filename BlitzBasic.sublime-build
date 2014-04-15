@@ -1,17 +1,14 @@
 {
 	"selector": "source.blitzbasic",
-	"shell": true,
-	"path": "D:\\Programme\\Blitz3D\\bin\\",
-	"env": {
-		"blitzpath": "D:\\Programme\\Blitz3D\\"
-	},
+	"target": "buildbb",
 	"working_dir": "${project_path:${folder:${file_path}}}",
-	"cmd": ["blitzcc", "-o", "${project_base_name:${file_base_name}}.exe", "${project_base_name:${file_base_name}}.bb"],
+	"cmd": ["blitzcc", "-d", "${project_base_name:${file_base_name}}.bb"],
+	"file_regex": "\\\"(.*?)\\\".*?([0-9]+).*?([0-9]+).*?(?:[0-9]+).*?(?:[0-9]+).*?:(.*)",
 
 	"variants": [
 		{
-			"name": "Debug Version",
-			"cmd": ["blitzcc", "-d", "${project_base_name:${file_base_name}}.bb"],
+			"name": "Release Version",
+			"cmd": ["blitzcc", "-o", "${project_base_name:${file_base_name}}.exe", "${project_base_name:${file_base_name}}.bb"],
 		},
 		{
 			"name": "Check Syntax",
