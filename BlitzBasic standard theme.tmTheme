@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>author</key>
+	<string>Xeres</string>
+	<key>name</key>
+	<string>BlitzBasic standard Theme</string>
+	<key>settings</key>
+	<array>
+		<dict>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#225588</string>
+				
+				<key>caret</key>
+				<string>#FFFFFF</string>
+				
+				<key>foreground</key>
+				<string>#FFFFFF</string>
+				
+				<key>selectionForeground</key>
+				<string>#000000</string>
+				
+				<key>invisibles</key>
+				<string>#004488</string>
+				
+				<key>lineHighlight</key>
+				<string>#365F88</string>
+				
+				<key>selection</key>
+				<string>#DDAA77</string>
+
+				<key>bracketsForeground</key>
+				<string>#FF8000</string>
+				
+				<key>bracketsOptions</key>
+				<string>foreground</string>
+
+				<key>bracketContentsForeground</key>
+				<string>#FF0064</string>
+				
+				<key>bracketContentsOptions</key>
+				<string>foreground</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Comments</string>
+			<key>scope</key>
+			<string>comment</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#FFEE00</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Strings</string>
+			<key>scope</key>
+			<string>string</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#00FF66</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Numbers</string>
+			<key>scope</key>
+			<string>constant.numeric</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#33FFDD</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Keywords</string>
+			<key>scope</key>
+			<string>keyword</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#AAFFFF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Functions</string>
+			<key>scope</key>
+			<string>support.function</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#AAFFFF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Function result</string>
+			<key>scope</key>
+			<string>declaration.function function-result</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#AAFFFF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Function name</string>
+			<key>scope</key>
+			<string>declaration.function function-name</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Function argument name</string>
+			<key>scope</key>
+			<string>declaration.function argument-name</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Function argument type</string>
+			<key>scope</key>
+			<string>declaration.function function-arg-type</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#0000FF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Function argument variable</string>
+			<key>scope</key>
+			<string>declaration.function function-argument</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>italic</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Class name</string>
+			<key>scope</key>
+			<string>declaration.class class-name</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>underline</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Invalid</string>
+			<key>scope</key>
+			<string>invalid</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#FF0000</string>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#FFF9F9</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Invalid Trailing Whitespace</string>
+			<key>scope</key>
+			<string>invalid.deprecated.trailing-whitespace</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#FFD0D0</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Section</string>
+			<key>scope</key>
+			<string>declaration.section section-name</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>italic</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Variables</string>
+			<key>scope</key>
+			<string>variable</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#C1C144</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Constants</string>
+			<key>scope</key>
+			<string>constant</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#6782D3</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Character Constants</string>
+			<key>scope</key>
+			<string>constant.character</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#AAFFFF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Language Constants</string>
+			<key>scope</key>
+			<string>constant.language</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#AAFFFF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Tag name</string>
+			<key>scope</key>
+			<string>keyword.markup.element-name</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#AAFFFF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Attribute name</string>
+			<key>scope</key>
+			<string>keyword.markup.attribute-name</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#AAFFFF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Attribute with Value</string>
+			<key>scope</key>
+			<string>meta.attribute-with-value</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#9B456F</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Exceptions</string>
+			<key>scope</key>
+			<string>keyword.exception</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#C82255</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Operators</string>
+			<key>scope</key>
+			<string>keyword.operator</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#FFFFFF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Control Structures</string>
+			<key>scope</key>
+			<string>keyword.control</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#AAFFFF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>TMLangDef: Keys</string>
+			<key>scope</key>
+			<string>support.constant.tm-language-def, support.constant.name.tm-language-def</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#7171F3</string>
+			</dict>
+		</dict>
+	</array>
+	<key>uuid</key>
+	<string>128e0efb-88b1-41bf-99d6-646d934e623f</string>
+</dict>
+</plist>
