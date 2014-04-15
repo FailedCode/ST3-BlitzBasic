@@ -8,7 +8,7 @@
 	</array>
 	
 	<key>name</key>
-	<string>blitzbasic</string>
+	<string>BlitzBasic</string>
 	
 	<key>patterns</key>
 	<array>
@@ -24,6 +24,14 @@
 		<dict>
 			<key>patterns</key>
 			<array>
+				<dict>
+					<key>include</key>
+					<string>#keywords</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#invalids</string>
+				</dict>
 				<dict>
 					<key>include</key>
 					<string>#type-definition</string>
@@ -50,20 +58,17 @@
 				</dict>
 				<dict>
 					<key>include</key>
-					<string>#numerics</string>
+					<string>#operators</string>
 				</dict>
 				<dict>
 					<key>include</key>
-					<string>#operators</string>
+					<string>#numerics</string>
 				</dict>
 				<dict>
 					<key>include</key>
 					<string>#types</string>
 				</dict>
-				<dict>
-					<key>include</key>
-					<string>#keywords</string>
-				</dict>
+
 				<dict>
 					<key>include</key>
 					<string>#tags</string>
@@ -88,13 +93,73 @@
 			</array>
 		</dict>
 		
+		<key>type-definition</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.other.blitzbasic</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>storage.type.class.blitzbasic</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.other.blitzbasic</string>
+						</dict>
+						<key>4</key>
+						<dict>
+							<key>name</key>
+							<string>storage.type.class.blitzbasic</string>
+						</dict>
+						<key>5</key>
+						<dict>
+							<key>name</key>
+							<string>storage.modifier.blitzbasic</string>
+						</dict>
+					</dict>
+					
+					<key>comment</key>
+					<string>Matche: Type Tmytype(</string>
+
+					<key>match</key>
+					<string>\b((?i)type)\s*([T]\w*)\b</string>
+					
+					<key>name</key>
+					<string>meta.type.definition.blitzbasic</string>
+
+				</dict>
+			</array>
+		</dict>
+		
+		<key>types</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\b(%|#|\$|[T]\w+)\b</string>
+					<key>name</key>
+					<string>storage.type.class.blitzbasic</string>
+				</dict>
+			</array>
+		</dict>
+
 		<key>constants</key>
 		<dict>
 			<key>patterns</key>
 			<array>
 				<dict>
 					<key>match</key>
-					<string>\b(?i:true|false|null|KEY_0|KEY_1|KEY_2|KEY_3|KEY_4|KEY_5|KEY_6|KEY_7|KEY_8|KEY_9|KEY_Q|KEY_W|KEY_E|KEY_R|KEY_T|KEY_Z|KEY_U|KEY_I|KEY_O|KEY_P|KEY_A|KEY_S|KEY_D|KEY_F|KEY_G|KEY_H|KEY_J|KEY_K|KEY_L|KEY_Y|KEY_X|KEY_C|KEY_V|KEY_B|KEY_N|KEY_M|KEY_OE|KEY_AE|KEY_UE|KEY_SZ|KEY_F1|KEY_F2|KEY_F3|KEY_F4|KEY_F5|KEY_F6|KEY_F7|KEY_F8|KEY_F9|KEY_F10|KEY_F11|KEY_F12|KEY_NUM_0|KEY_NUM_1|KEY_NUM_2|KEY_NUM_3|KEY_NUM_4|KEY_NUM_5|KEY_NUM_6|KEY_NUM_7|KEY_NUM_8|KEY_NUM_9|KEY_NUM_KOMMA|KEY_NUM_MINUS|KEY_NUM_PLUS|KEY_NUM_MAL|KEY_NUM_GETEILT|KEY_NUM_ENTER|KEY_HOCH|KEY_RUNTER|KEY_LINKS|KEY_RECHTS|KEY_EINFG|KEY_ENTF|KEY_POS1|KEY_ENDE|KEY_BILDHOCH|KEY_BILDRUNTER|KEY_ESC|KEY_RETURN|KEY_BACKSPACE|KEY_TAB|KEY_ROLLEN|KEY_DRUCKEN|KEY_PAUSE|KEY_NUMLOCK|KEY_LEERTASTE|KEY_FESTSTELLTASTE|KEY_LSHIFT|KEY_RSHIFT|KEY_LSTRG|KEY_RSTRG|KEY_LALT|KEY_RALT|KEY_LWINDOWS|KEY_RWINDOWS|KEY_SKLAMMERN|KEY_AKZENT|KEY_PLUS|KEY_MINUS|KEY_PUNKT|KEY_KOMMA|KEY_DACH|KEY_RAUTE|KEY_RECHNER|KEY_MENU|KEY_COMPUTER|KEY_MEDIA|KEY_MEDIA_PLAY|KEY_MEDIA_STOP|KEY_MEDIA_NEXTTRACK|KEY_MEDIA_MUTE|KEY_MEDIA_VOLUMEPLUS|KEY_MEDIA_VOLUMEMINUS|KEY_INET_HOME|KEY_INET_SUCHEN|KEY_INET_FAVOURITEN|KEY_INET_AKTUALISIEREN|KEY_INET_STOP|KEY_INET_VORWAERTS|KEY_INET_ZURUECK|KEY_INET_EMAIL|KEY_SYSTEM_POWER|KEY_SYSTEM_SLEEP|KEY_SYSTEM_WAK)\b</string>
+					<string>\b(?i:TRUE|FALSE|NULL|KEY_0|KEY_1|KEY_2|KEY_3|KEY_4|KEY_5|KEY_6|KEY_7|KEY_8|KEY_9|KEY_Q|KEY_W|KEY_E|KEY_R|KEY_T|KEY_Z|KEY_U|KEY_I|KEY_O|KEY_P|KEY_A|KEY_S|KEY_D|KEY_F|KEY_G|KEY_H|KEY_J|KEY_K|KEY_L|KEY_Y|KEY_X|KEY_C|KEY_V|KEY_B|KEY_N|KEY_M|KEY_OE|KEY_AE|KEY_UE|KEY_SZ|KEY_F1|KEY_F2|KEY_F3|KEY_F4|KEY_F5|KEY_F6|KEY_F7|KEY_F8|KEY_F9|KEY_F10|KEY_F11|KEY_F12|KEY_NUM_0|KEY_NUM_1|KEY_NUM_2|KEY_NUM_3|KEY_NUM_4|KEY_NUM_5|KEY_NUM_6|KEY_NUM_7|KEY_NUM_8|KEY_NUM_9|KEY_NUM_KOMMA|KEY_NUM_MINUS|KEY_NUM_PLUS|KEY_NUM_MAL|KEY_NUM_GETEILT|KEY_NUM_ENTER|KEY_HOCH|KEY_RUNTER|KEY_LINKS|KEY_RECHTS|KEY_EINFG|KEY_ENTF|KEY_POS1|KEY_ENDE|KEY_BILDHOCH|KEY_BILDRUNTER|KEY_ESC|KEY_RETURN|KEY_BACKSPACE|KEY_TAB|KEY_ROLLEN|KEY_DRUCKEN|KEY_PAUSE|KEY_NUMLOCK|KEY_LEERTASTE|KEY_FESTSTELLTASTE|KEY_LSHIFT|KEY_RSHIFT|KEY_LSTRG|KEY_RSTRG|KEY_LALT|KEY_RALT|KEY_LWINDOWS|KEY_RWINDOWS|KEY_SKLAMMERN|KEY_AKZENT|KEY_PLUS|KEY_MINUS|KEY_PUNKT|KEY_KOMMA|KEY_DACH|KEY_RAUTE|KEY_RECHNER|KEY_MENU|KEY_COMPUTER|KEY_MEDIA|KEY_MEDIA_PLAY|KEY_MEDIA_STOP|KEY_MEDIA_NEXTTRACK|KEY_MEDIA_MUTE|KEY_MEDIA_VOLUMEPLUS|KEY_MEDIA_VOLUMEMINUS|KEY_INET_HOME|KEY_INET_SUCHEN|KEY_INET_FAVOURITEN|KEY_INET_AKTUALISIEREN|KEY_INET_STOP|KEY_INET_VORWAERTS|KEY_INET_ZURUECK|KEY_INET_EMAIL|KEY_SYSTEM_POWER|KEY_SYSTEM_SLEEP|KEY_SYSTEM_WAK)\b</string>
 					<key>name</key>
 					<string>constant.language.blitzbasic</string>
 				</dict>
@@ -106,15 +171,19 @@
 			<key>patterns</key>
 			<array>
 				<dict>
+
+					<key>comment</key>
+					<string>Matche: Function Func_Name.TType (</string>
+
 					<key>begin</key>
-					<string>\b((?i:function|method))\s+([a-zA-Z_]\w*)\s*(?::\s*([a-zA-Z_]\w*))?(?:\s*\[,*\])?(?:\s+((?i)ptr))?\s*\(</string>
+					<string>((?i)function)\s+(\w+)((?:\.{1})[T]\w+|%|#|\$)?\s*\(</string>
 					
 					<key>beginCaptures</key>
 					<dict>
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>keyword.other.blitzbasic</string>
+							<string>keyword.control.blitzbasic</string>
 						</dict>
 						<key>2</key>
 						<dict>
@@ -124,12 +193,7 @@
 						<key>3</key>
 						<dict>
 							<key>name</key>
-							<string>storage.type.class.blitzbasic</string>
-						</dict>
-						<key>4</key>
-						<dict>
-							<key>name</key>
-							<string>storage.type.class.blitzbasic</string>
+							<string>entity.name.type.blitzbasic</string>
 						</dict>
 					</dict>
 
@@ -147,6 +211,7 @@
 
 					<key>name</key>
 					<string>meta.function.definition.blitzbasic</string>
+
 					<key>patterns</key>
 					<array>
 						<dict>
@@ -164,7 +229,7 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>\b(?i:abs|after|before|case|const|data|default|delete|dim|each|else|elseif|endif|exit|false|field|first|float|for|forever|function|global|gosub|goto|handle|if|include|insert|int|last|local|mod|new|next|object|pi|read|repeat|restore|return|sar|select|sgn|shl|shr|step|str|then|to|true|type|until|wend|while|stop|end|endfunction)\b</string>
+					<string>\b(?i:abs|after|before|case|const|data|default|delete|dim|each|else|elseif|endif|exit|field|first|float|for|forever|global|handle|if|include|insert|int|last|local|mod|new|next|object|pi|read|repeat|restore|return|sar|select|sgn|shl|shr|step|str|then|to|type|until|wend|while|stop|function|end\s*function|end)\b</string>
 					<key>name</key>
 					<string>keyword.control.blitzbasic</string>
 				</dict>
@@ -177,13 +242,26 @@
 			</array>
 		</dict>
 		
+		<key>invalids</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\b(?i:gosub|goto)\b</string>
+					<key>name</key>
+					<string>invalid.deprecated.blitzbasic</string>
+				</dict>
+			</array>
+		</dict>
+
 		<key>labels</key>
 		<dict>
 			<key>patterns</key>
 			<array>
 				<dict>
 					<key>match</key>
-					<string>(\.\b\w+)\b</string>
+					<string>(\.\w+)\b</string>
 					<key>name</key>
 					<string>variable.language.blitzbasic</string>
 				</dict>
@@ -196,7 +274,7 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>-?((?&lt;!\.)\.?\b\d+(?:e?-?\d*)|\b\d+(?:e-?\d*)|\b\d*\.\d+(?:e?-?\d*))\b</string>
+					<string>-?\d*\.?\d*</string>
 					<key>name</key>
 					<string>constant.numeric.float.blitzbasic</string>
 				</dict>
@@ -233,7 +311,7 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>((?i)\||:\||&amp;|:&amp;|-|:-|\+|:\+|~|:~|\^|:\^|\*|:\*|/|:/|:Mod\b|:Shl\b|:Shr\b|:Sar\b)</string>
+					<string>((?i)\+|-|\*|\/|\^|\bMod\b|\bShl\b|\bShr\b|\bSar\b)</string>
 					<key>name</key>
 					<string>keyword.operator.arithmetic.blitzbasic</string>
 				</dict>
@@ -272,66 +350,19 @@
 				</dict>
 			</array>
 		</dict>
-			
-		<key>type-definition</key>
-		<dict>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>captures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>keyword.other.blitzbasic</string>
-						</dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>storage.type.class.blitzbasic</string>
-						</dict>
-						<key>3</key>
-						<dict>
-							<key>name</key>
-							<string>keyword.other.blitzbasic</string>
-						</dict>
-						<key>4</key>
-						<dict>
-							<key>name</key>
-							<string>storage.type.class.blitzbasic</string>
-						</dict>
-						<key>5</key>
-						<dict>
-							<key>name</key>
-							<string>storage.modifier.blitzbasic</string>
-						</dict>
-					</dict>
-					<key>match</key>
-					<string>\b((?i)type)\s*([T][A-Z]\w*)\b</string>
-					<key>name</key>
-					<string>meta.type.definition.blitzbasic</string>
-				</dict>
-			</array>
-		</dict>
-		
-		<key>types</key>
-		<dict>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>match</key>
-					<string>\b((?i)%|#|\$|(?-i)[T][A-Z]\w+)\b</string>
-					<key>name</key>
-					<string>storage.type.class.blitzbasic</string>
-				</dict>
-			</array>
-		</dict>
-		
+
+<!--
+	ToDo:
+		Variablen nach definition färben
+-->
+<!--
 		<key>variables</key>
 		<dict>
 			<key>patterns</key>
 			<array>
 				<dict>
+					<key>match</key>
+					<string>(?i:global|local|const|field)</string>
 					<key>captures</key>
 					<dict>
 						<key>1</key>
@@ -340,13 +371,12 @@
 							<string>variable.other.blitzbasic</string>
 						</dict>
 					</dict>
-					<key>match</key>
-					<string>\b(?!\s*\w+\s*(?:\(|"))(\w+)\b</string>
 					<key>name</key>
 					<string>meta.variable.blitzbasic</string>
 				</dict>
 			</array>
 		</dict>
+-->
 	</dict>
 	
 	<key>scopeName</key>
